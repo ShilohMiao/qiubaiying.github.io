@@ -1,0 +1,115 @@
+---
+layout: post
+title:  "sketch"
+date:   2019-01-15 14:02:08 +0800
+categories: jekyll update
+---
+![c75f7b7811a5a4f1cf9413e7fa2dccbd.png](resources/DF50B001B412EC424E4738CB76658E45.png)
+
+差不多两年前，我罗列了一圈当时最好用的几个sketch插件。在这些插件的加持下，UI设计的效率得到了大幅度的提升。
+
+不过经过这么长时间的发展，sketch本身早就已经发生了很多的变化。有些插件早就已经不更新也不支持新的sketch了，而有些插件也已今非昔比了。
+
+今天我就为大家再来罗列一遍当下最有价值的几款sketch插件。
+
+---
+
+### SketchI18N ：先让Sketch支持中文
+
+查看GitHub详情：<https://github.com/cute/SketchI18N>
+
+Sketch对于许多用户而言有两座大山：苹果电脑和英语。前者现在绝大多数企业都为设计师提供了Mac。而后者，现在在这款插件的加持下也迎刃而解了。
+
+插件本身已经集成了一些其他插件的汉化。那些没有涉及到的汉化，你可以自己动手来解决：
+
+插件 ==\> 管理插件 ==\> 打开插件目录 ==\> Plugins ==\> SketchI18N.sketchplugin 右键 “显示包内容” ==\> Contents ==\> Resources ==\> i18n 下面的两个文件分别是简体中文（zh-Hans.json）和繁体中文（zh-Hant.json），用编辑器打开看到格式为
+
+```js
+{
+  "Name": "名字",
+}
+```
+
+只要往尖括号结尾前添加字段翻译就可以，比如：
+
+```js
+{
+  "Name": "名字",
+  "Rename Instances": "重新命名元件例項",
+  "Rename Selected Instances": "重新命名所選例項",
+}
+```
+
+保存，重启Sketch就能生效。注意字段需要完整翻译，Rename Instances 你不能把 Rename 和 Instances 分开翻译，同时要注意大小写。
+
+### image replaste ：直接复制网页中的图片
+
+查看GitHub详情：<https://github.com/mheesakkers/sketch-image-replaste>
+
+![68747470733a2f2f7777772e6d697368612e73747564696f2f696d6167652d7265706c617374652f696d616765732f73637265656e636173742e676966.gif](resources/71A9FE3F7F990F019BF9A95A9E9008F9.gif)
+
+相比Content generator或者Craft，我更推崇这类“短小精悍”型的解决特定需求的组件：找到网页中的图片command+C，sketch中找到要填充的位置command+shift+Y
+
+### 中文人名插件
+
+查看GitHub详情：<https://github.com/JJYing/Fake-Chinese-Name-for-Sketch>
+
+也是一个类似上述插件的只做一个点的小插件，作者是国内设计师JJYing ，播客《Anyway.fm》主持人。
+
+同样的，如果你觉得名字不够用，也可以通过类似SketchI18N添加汉化的方式添加内容。
+
+### compo ：你需要一个快速生成按钮的方式
+
+查看GitHub详情：<https://github.com/romashamin/compo-sketch>
+
+输入一段文本，比如：下一步，然后选中它 command+J ，你就得到了一个最简单的按钮。修改它的样式，并重新按照文本和边框的位置关系重命名文本，比如：12:18:12:18，然后随你如何修改文本，只要按 command+J 你就能得到何时的宽高了
+
+![compo-explanation@2x.png](resources/C36F72BAED7719F12E5400886E799FC2.png)
+
+类似的插件两年前应该就已经推荐过了，不过确实很好用，而且它还有一些其他规则，具体看上图
+
+### move half pixel ：移动半像素
+
+查看GitHub详情：<https://github.com/canisminor1990/sketch-move-half-pixel>
+
+Sketch用键盘移动组件的基础单位是一像素。不过有时候会需要用到半像素的移动，例如确定线条的位置，这个时候这个插件就巨好用了。
+
+不过它的默认快捷键 option+方向键 覆盖了原本的“显示位置关系并以一像素单位移动”的操作。而且这个操作本身就是一个高频操作。简易修改该插件的快捷键，方法：
+
+屏幕左上角“苹果”图标 ==\> 系统偏好设置... ==\> 键盘 ==\> 快捷键左侧列表选择“应用快捷键”，再点选列表下方的加号，弹窗里应用程序选择Sketch，然后菜单标题输入“Move right 0.5px”,再键入快捷键，重复四次操作。
+
+![DingTalk20170717171736.png](resources/4E54DFB098BA41D31BEC61CABECB13CC.png)
+
+### Sketch Palettes ：色彩库备份还原工具
+
+查看GitHub详情：<https://github.com/andrewfiorillo/sketch-palettes>
+
+不同文件之间的色彩库是不通的，要把自定义好的色彩库搬到新的文件就需要复制原文件然后打开删除内容这种傻瓜方式来复用色彩库。
+
+这款插件可以帮助我们导出、导入默认色彩库及自定义色彩库。
+
+### Magic Mirror ：用Sketch快速生成效果预览
+
+查看GitHub详情：<https://github.com/MagicSketch/MagicMirror>
+
+以往做界面的效果图时我们需要借助PS，把界面嵌套到一个有透视的手机模型里。
+
+现在借助这个插件我们可以摆脱PS来实现这个效果了～
+
+![687474703a2f2f636c2e6c792f696d6167652f314a306433573144307133782f6d616769632d6d6972726f722d62616e6e65722e676966.gif](resources/AAC4512E9B01063833E6B598B170D94F.gif)
+
+### OverviewArtboard ：创建总画板
+
+查看GitHub详情：<https://github.com/zhongerxin/OverviewArtboard>
+
+能让你快速生成一个包含所有画板的总览画板，用于导出包含所有内容的预览图片。
+
+![create overview.png](resources/C72D6D7D00120B49C38E06787F2582D7.png)
+
+### Comma ：英文字母大小写切换
+
+查看GitHub详情：<https://github.com/margusholland/Comma>
+
+选择要修改的文本图层，可以调整英文字母 小写、大写、段首字母大写、单词首字母大写。
+
+还可以去除标点后添加空格（限英文标点）、去除多余换行、生成双重换行、统计字符数、统计单词数。
