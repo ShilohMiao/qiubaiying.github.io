@@ -1,7 +1,7 @@
 ---
 layout: page
-title: About
-permalink: /关于/
+title: 关于
+permalink: /about/
 ---
 
 这是一个个人页面，内容有待编辑。
